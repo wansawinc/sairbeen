@@ -18,15 +18,42 @@ Due to limits on social media live streaming Audio only can not be transmitted i
 ## Where can i listen?
 You can listen on all social media websites/apps.
 1. [Facebook](https://fb.com/wansawcom)
-2. (Twitter)[]
-3. (Instagram)
-4. (VK)
-5. (ok.ru)
-6. (Twich)
-7. (Telegram)
-8. (TikTok)
-9. (D-Live)
-10. (Trovo)
-11. (Dailymotion)
+2. [Twitter]
+3. [Instagram]
+4. [VK]
+5. [ok.ru]
+6. [Twich]
+7. [Telegram]
+8. [TikTok]
+9. [D-Live]
+10.[Trovo]
+11.[Dailymotion] \
 *We will add more sources in future*
+
+## Copyright
+
+Please not we do not host any content nor we endorce, We are not responsible for any abusive, slang or any misleading information. \
+We are not even responsible if you are lost your phone password or you feeling angry after listing to this 30 minutes stream.
+
+Audio conten is provided by Radio kashmir srinagar and contains paid advertisments. \
+Radio kashmir srinagar is responsible for contenet and information as they own license to broadcast.
+
+If you found anything inappropriate please contact Radio Kashmir Srinagar. 
+
+## Contribute 
+
+You are welcome........ \
+If you have any IDEA suggestion and if you want to mount another destinaton ( not currenlty available ) lets know. 
+
+### Tools used 
+
+FFMPEG \
+nginx \
+upCloud \
+apache2 \
+nodejs \
+pip \
+Docker \
+
+
 
