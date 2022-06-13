@@ -1,8 +1,5 @@
 # Welcome
-[![GitHub issues](https://img.shields.io/github/issues/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/issues) [![GitHub forks](https://img.shields.io/github/forks/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/network) [![GitHub stars](https://img.shields.io/github/stars/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/stargazers) [![GitHub issues](https://img.shields.io/badge/Made%20In-Kashmir-orange)](https://wansaw.com) 
-
-
-[![Twitter](https://img.shields.io/twitter/url?style=flat-square&url=https%3A%2F%2Fgithub.com%2Fwansawinc%2Fsairbeen)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fwansawinc%2Fsairbeen) [![GitHub license](https://img.shields.io/github/license/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/issues) [![GitHub forks](https://img.shields.io/github/forks/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/network) [![GitHub stars](https://img.shields.io/github/stars/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/stargazers) [![GitHub issues](https://img.shields.io/badge/Made%20In-Kashmir-orange)](https://wansaw.com) [![Twitter](https://img.shields.io/twitter/url?style=flat-square&url=https%3A%2F%2Fgithub.com%2Fwansawinc%2Fsairbeen)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fwansawinc%2Fsairbeen) [![GitHub license](https://img.shields.io/github/license/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/blob/main/LICENSE)
 
 ## Relay sairbeen from Radio kashmir srinager to internet over multiple destinations.
 _Source code has been moved to another private repo_ \
