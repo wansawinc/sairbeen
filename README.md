@@ -1,9 +1,13 @@
 # Welcome
+[![GitHub issues](https://img.shields.io/github/issues/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/issues) [![GitHub forks](https://img.shields.io/github/forks/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/network) [![GitHub stars](https://img.shields.io/github/stars/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/stargazers) [![Kashmir]([https://img.shields.io/github/stars/wansawinc/sairbeen](https://img.shields.io/badge/Made%20In-Kashmir-orange)?style=flat-square)](https://github.com/wansawinc/sairbeen/)  
+
+
+[![Twitter](https://img.shields.io/twitter/url?style=flat-square&url=https%3A%2F%2Fgithub.com%2Fwansawinc%2Fsairbeen)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fwansawinc%2Fsairbeen) [![GitHub license](https://img.shields.io/github/license/wansawinc/sairbeen?style=flat-square)](https://github.com/wansawinc/sairbeen/blob/main/LICENSE)
+
 ## Relay sairbeen from Radio kashmir srinager to internet over multiple destinations.
 _Source code has been moved to another private repo_ \
 If you want to contribute or have concern/query [Create issue](https://github.com/wansawinc/sairbeen/issues)
 
-[Breakdance](https://breakdance.github.io/breakdance/)
 ## What is this?
 Radio Kashmir Srinagar (JK) India telecasts news bulliten over MW on Radio frequency and is avilable on RADIO only. \
 Most of people now days use internet and dont have access either do not preffer to listen news on Radio. \
