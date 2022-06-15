@@ -11,7 +11,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 # check environmental variables
 # -----------------------------------------------------------------------------------
+# Set environment variables
+os.environ['ANCHOR_EMAIL'] = 'username'
+os.environ['ANCHOR_PASSWORD'] = 'secret'
 
+# Get environment variables
+USER = os.getenv('ANCHOR_EMAIL')
+PASSWORD = os.environ.get('ANCHOR_PASSWORD')
 
 anchor_email = os.environ.get('ANCHOR_EMAIL')
 
