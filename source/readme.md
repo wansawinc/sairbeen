@@ -10,5 +10,6 @@ ffmpeg -i fb.mp4 -s 1280x720 -c libx265 -tune animation -r 2 -preset ultrafast h
 ```
 
 fb.mkv link : https://raw.githubusercontent.com/wansawinc/sairbeen/main/source/fb.mkv \
-in.mkv link : https://raw.githubusercontent.com/wansawinc/sairbeen/main/source/in.mkv
+in.mkv link : https://raw.githubusercontent.com/wansawinc/sairbeen/main/source/in.mkv \
+Audio stream: https://raw.githubusercontent.com/wansawinc/sairbeen/main/source/audio.m3u8
 
