@@ -1,7 +1,4 @@
 #EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio-1",NAME="Audio2",LANGUAGE="en",AUTOSELECT=YES,DEFAULT=YES,URI="http://air.pc.cdn.bitgravity.com/air/live/pbaudio136/chunklist.m3u8"
-#EXT-X-STREAM-INF:BANDWIDTH=1758000,RESOLUTION=1280x720,AUDIO="audio-1"
-https://raw.githubusercontent.com/wansawinc/sairbeen/main/source/in/index.m3u8
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio-1",NAME="Audio2",LANGUAGE="en",AUTOSELECT=YES,DEFAULT=NO,URI="http://air.pc.cdn.bitgravity.com/air/live/pbaudio136/chunklist.m3u8"
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio-1",NAME="Audio3",LANGUAGE="en",AUTOSELECT=YES,DEFAULT=NO,URI="http://air.pc.cdn.bitgravity.com/air/live/pbaudio136/chunklist.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",LANGUAGE="eng",NAME="English",AUTOSELECT=YES, DEFAULT=YES,URI="http://air.pc.cdn.bitgravity.com/air/live/pbaudio136/chunklist.m3u8"
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=195023,CODECS="avc1.42e00a,mp4a.40.2",AUDIO="audio"
+index.m3u8
