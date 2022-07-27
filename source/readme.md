@@ -11,5 +11,7 @@ ffmpeg -i fb.mp4 -s 1280x720 -c libx265 -tune animation -r 2 -preset ultrafast h
 
 fb.mkv link : https://raw.githubusercontent.com/wansawinc/sairbeen/main/source/fb.mp4 \
 in.mkv link : https://raw.githubusercontent.com/wansawinc/sairbeen/main/source/in.mp4 \
-Audio stream: https://raw.githubusercontent.com/wansawinc/sairbeen/main/source/audio.m3u8
+Audio stream: https://raw.githubusercontent.com/wansawinc/sairbeen/main/source/audio.m3u8 \
+Audio Default: http://air.pc.cdn.bitgravity.com/air/live/pbaudio136/chunklist.m3u8
+
 
