@@ -19,12 +19,29 @@ Anyone can listen to Sairbeen on internet.
 
 Due to limits on social media live streaming Audio only can not be transmitted in order to stream Sairbeen from RKS to social media sites we need to stream as VIDEO, So we produce VIDEO using an static Image and original audio from RKS . 
 
+# Update - 29 Sep 2022
 
-## Where can i listen?
-You can listen on all social media websites/apps.
-1. [Facebook](https://fb.com/wansawcom)
+We have recently made some changes and also removed streams from all platforms includng Facebook and Youtube.
+why? Due to lack of budget we could not pay bill i.e 110$ for transcoding and restreaming. 
+We have downgraded our server and only Instagram streams are enabled using on Hetzner AMDx Server that could not transcode and stream with low leteracy on multiple destinations.
+
+We have also removed donations pages and donate.wansaw.com will be available in case you are reading this ( we dont think any kashmiri will dare to do so)
+
+Instagram comments are now Enabled and we do not monited comments so we are not responsible,
+
+## Changed Instagream Account
+In past we used our dedicated instagram @rks_sairbeen as we no longer offically maintain this project we have deleted our instagram account.
+We will now stream on our main instagram account @wansawinc ( https://instagram.com/wansawinc ) 
+
+-- Also we have deleted all accounts i.e Facebook, Youtube, TikTok, Dailymotion, VK, and all other,
+
+
+------------------------------------------
+
+## We have removed below platforms.
+1. [Facebook]
 2. [Twitter]
-3. [Instagram]
+3. [Youtube]
 4. [VK]
 5. [ok.ru]
 6. [Twich]
@@ -33,7 +50,8 @@ You can listen on all social media websites/apps.
 9. [D-Live]
 10.[Trovo]
 11.[Dailymotion] \
-*We will add more sources in future*
+
+*We may add back sources in future*
 
 ## Copyright
 
@@ -57,8 +75,6 @@ nginx \
 upCloud \
 apache2 \
 nodejs \
-pip \
+pyFFMPEG \
 Docker \
-
-
 
