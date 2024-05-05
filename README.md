@@ -49,13 +49,13 @@ We will now stream on our main instagram account @wansawinc ( https://instagram.
 8. [TikTok]
 9. [D-Live]
 10.[Trovo]
-11.[Dailymotion] \
+11.[Dailymotion] 
 
 *We may add back sources in future*
 
 ## Copyright
 
-Please not we do not host any content nor we endorce, We are not responsible for any abusive, slang or any misleading information. \
+Please note we do not host any content nor we endorce, We are not responsible for any abusive, slang or any misleading information. \
 We are not even responsible if you are lost your phone password or you feeling angry after listing to this 30 minutes stream.
 
 Audio conten is provided by Radio kashmir srinagar and contains paid advertisments. \
@@ -76,5 +76,5 @@ upCloud \
 apache2 \
 nodejs \
 pyFFMPEG \
-Docker \
+Docker 
 
