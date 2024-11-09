@@ -1,13 +1,13 @@
-name: Podcast Uploader
+name: 'Podcast Uploader'
 
 on:
- # schedule:
- #   - cron: "29 12 * * *"  # 17:59 IST (UTC time is 12:29)
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight
   workflow_dispatch:
-  #push:
-  #  paths:
-  #    - episode.json
-  #  branches: [main]
+  push:
+    paths:
+      - episode.json
+    branches: [main]
 
 jobs:
   fetch_latest_video_and_upload:
@@ -16,11 +16,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Fetch Latest Video From Youtube
+      - name: Fetch Latest Video ID
         env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }} 
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
-          curl -s "https://www.googleapis.com/youtube/v3/search?key=$YOUTUBE_API_KEY&channelId=UCJzSyye27SndBql41K1S7Mg&part=snippet&order=date&maxResults=1&publishedAfter=$(date -I)T00:00:00Z" > video.json
+          curl -s "https://www.googleapis.com/youtube/v3/search?key=$YOUTUBE_API_KEY&channelId=YOUR_CHANNEL_ID&part=snippet&order=date&maxResults=1&publishedAfter=$(date -I)T00:00:00Z" > video.json
           VIDEO_ID=$(jq -r '.items[0].id.videoId' video.json)
           if [ "$VIDEO_ID" != "null" ]; then
             echo "{\"id\": \"$VIDEO_ID\"}" > episode.json
@@ -31,7 +31,7 @@ jobs:
             git push
           fi
 
-      - name: Upload To Anchor.Fm
+      - name: Upload Episode from YouTube To Anchor.Fm
         if: success()
         uses: Schroedinger-Hat/youtube-to-anchorfm@v2.5.0
         env:
