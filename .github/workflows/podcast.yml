@@ -12,6 +12,7 @@ on:
 jobs:
   podcast_uploader:
     runs-on: ubuntu-latest
+    environment: podcast
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
