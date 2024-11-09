@@ -10,7 +10,7 @@ on:
     branches: [main]
 
 jobs:
-  fetch_latest_video_and_upload:
+  podcast_uploader:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
