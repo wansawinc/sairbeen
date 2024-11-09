@@ -1,4 +1,4 @@
-name: 'Podcast Uploader v2'
+name: 'Podcast uplader v3'
 
 on:
   schedule:
@@ -10,7 +10,7 @@ on:
     branches: [main]
 
 jobs:
-  podcast_uploader:
+  podcast_uplader:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -20,16 +20,40 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
-          curl -s "https://www.googleapis.com/youtube/v3/search?key=$YOUTUBE_API_KEY&channelId=YOUR_CHANNEL_ID&part=snippet&order=date&maxResults=1&publishedAfter=$(date -I)T00:00:00Z" > video.json
-          VIDEO_ID=$(jq -r '.items[0].id.videoId' video.json)
-          if [ "$VIDEO_ID" != "null" ]; then
-            echo "{\"id\": \"$VIDEO_ID\"}" > episode.json
-            git config --global user.name "Rehanna"
-            git config --global user.email "rehanna@git.com"
-            git add episode.json
-            git commit -m "Update episode.json with latest video ID $VIDEO_ID"
-            git push
+          # Fetch latest video uploaded today from YouTube API
+          RESPONSE=$(curl -s "https://www.googleapis.com/youtube/v3/search?key=$YOUTUBE_API_KEY&channelId=UCJzSyye27SndBql41K1S7Mg&part=snippet&order=date&maxResults=1&publishedAfter=$(date -I)T00:00:00Z")
+
+          # Check if response is valid JSON and not empty
+          if [ -z "$RESPONSE" ] || [ "$(echo $RESPONSE | jq '.items | length')" -eq 0 ]; then
+            echo "No new video found for today's date."
+            exit 0
           fi
+
+          # Extract video ID from JSON response
+          VIDEO_ID=$(echo "$RESPONSE" | jq -r '.items[0].id.videoId')
+          echo "Video ID: $VIDEO_ID"
+
+          # Create episode.json file with the video ID
+          echo "{\"id\": \"$VIDEO_ID\"}" > episode.json
+
+      - name: Commit and Push episode.json
+        run: |
+          # Set user details for commit
+          git config --global user.name "Rehanna"
+          git config --global user.email "rehanna@git.com"
+
+          # Add episode.json, commit, and push changes
+          git add episode.json
+          git commit -m "Update for $VIDEO_ID"
+          git push
+
+      - name: Pull to Synchronize Repository
+        run: |
+          # Configure repository directory as safe
+          git config --global --add safe.directory "$(pwd)"
+          
+          # Pull latest changes to synchronize repository state
+          git pull origin main
 
       - name: Upload Episode from YouTube To Anchor.Fm
         if: success()
@@ -40,7 +64,5 @@ jobs:
           SPOTIFY_EMAIL: ${{ secrets.SPOTIFY_EMAIL }}
           SPOTIFY_PASSWORD: ${{ secrets.SPOTIFY_PASSWORD }}
           EPISODE_PATH: /github/workspace/
-          #EPISODE_FILE: episode.json
           ANCHOR_LOGIN: false
           LOAD_THUMBNAIL: true
-          
