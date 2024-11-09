@@ -4,10 +4,10 @@ on:
  # schedule:
  #   - cron: "29 12 * * *"  # 17:59 IST (UTC time is 12:29)
   workflow_dispatch:
-  push:
-    paths:
-      - episode.json
-    branches: [main]
+  #push:
+  #  paths:
+  #    - episode.json
+  #  branches: [main]
 
 jobs:
   fetch_latest_video_and_upload:
