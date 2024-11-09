@@ -1,4 +1,4 @@
-name: 'Podcast uplader v3'
+name: 'Podcast uploader v3'
 
 on:
   schedule:
@@ -10,22 +10,31 @@ on:
     branches: [main]
 
 jobs:
-  podcast_uplader:
+  podcast_uploader:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set Timezone to IST
+        run: |
+          sudo timedatectl set-timezone Asia/Kolkata
+          echo "Timezone set to $(date)"
+
       - name: Fetch Latest Video ID
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
-          # Fetch latest video uploaded today from YouTube API
-          RESPONSE=$(curl -s "https://www.googleapis.com/youtube/v3/search?key=$YOUTUBE_API_KEY&channelId=UCJzSyye27SndBql41K1S7Mg&part=snippet&order=date&maxResults=1&publishedAfter=$(date -I)T00:00:00Z")
+          # Set IST (UTC+5:30) date for the YouTube API call
+          DATE_IST=$(date -d 'now' '+%Y-%m-%dT00:00:00+05:30')
+          echo "Using date for YouTube API: $DATE_IST"
+
+          # Fetch latest video uploaded today in IST from YouTube API
+          RESPONSE=$(curl -s "https://www.googleapis.com/youtube/v3/search?key=$YOUTUBE_API_KEY&channelId=UCJzSyye27SndBql41K1S7Mg&part=snippet&order=date&maxResults=1&publishedAfter=$DATE_IST")
 
           # Check if response is valid JSON and not empty
           if [ -z "$RESPONSE" ] || [ "$(echo $RESPONSE | jq '.items | length')" -eq 0 ]; then
-            echo "No new video found for today's date."
+            echo "No new video found for today's date in IST."
             exit 0
           fi
 
