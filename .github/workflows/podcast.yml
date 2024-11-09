@@ -1,4 +1,4 @@
-name: 'Podcast Uploader'
+name: 'Podcast Uploader v2'
 
 on:
   schedule:
