@@ -25,16 +25,16 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
-          # Set IST (UTC+5:30) date for the YouTube API call
-          DATE_IST=$(date -d 'now' '+%Y-%m-%dT00:00:00+05:30')
-          echo "Using date for YouTube API: $DATE_IST"
+          # Convert IST date to UTC for YouTube API compatibility
+          DATE_UTC=$(date -d 'now -5 hours -30 minutes' '+%Y-%m-%dT00:00:00Z')
+          echo "Using UTC date for YouTube API: $DATE_UTC"
 
-          # Fetch latest video uploaded today in IST from YouTube API
-          RESPONSE=$(curl -s "https://www.googleapis.com/youtube/v3/search?key=$YOUTUBE_API_KEY&channelId=UCJzSyye27SndBql41K1S7Mg&part=snippet&order=date&maxResults=1&publishedAfter=$DATE_IST")
+          # Fetch latest video uploaded today in UTC from YouTube API
+          RESPONSE=$(curl -s "https://www.googleapis.com/youtube/v3/search?key=$YOUTUBE_API_KEY&channelId=UCJzSyye27SndBql41K1S7Mg&part=snippet&order=date&maxResults=1&publishedAfter=$DATE_UTC")
 
           # Check if response is valid JSON and not empty
           if [ -z "$RESPONSE" ] || [ "$(echo $RESPONSE | jq '.items | length')" -eq 0 ]; then
-            echo "No new video found for today's date in IST."
+            echo "No new video found for today's date in UTC."
             exit 0
           fi
 
@@ -44,6 +44,7 @@ jobs:
 
           # Create episode.json file with the video ID
           echo "{\"id\": \"$VIDEO_ID\"}" > episode.json
+
 
       - name: Commit and Push episode.json
         run: |
